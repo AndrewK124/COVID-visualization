@@ -9,7 +9,7 @@ This project explores the global spread and impact of COVID-19 from the beginnin
 - Microsoft Excel
 - Tableau Public
 
---- 
+---
 
 ## SQL Analysis 
 
