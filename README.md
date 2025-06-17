@@ -45,5 +45,6 @@ This project explores the global spread and impact of COVID-19 from the beginnin
 ## Tableau Visualization 
 
 Following the data exploration in SQL, particular SQL queries were crafted and executed and the results from these queries were exported over to Excel and visualized with Tableau Public. 
-
-Link to the Dashboard: https://public.tableau.com/app/profile/andrew.key3510/viz/CovidVisualization_17446566327670/Dashboard
+---
+## Dashboard Link
+Tableau Public: https://public.tableau.com/app/profile/andrew.key3510/viz/CovidVisualization_17446566327670/Dashboard
