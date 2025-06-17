@@ -1,8 +1,12 @@
 # COVID-19 Data Exploration and Visualization Project 
 
-This project explores the global spread and impact of COVID-19 from the beginning of 2020 up to March 2025 using data from Our World In Data. It combines SQL-based analysis with data visualization in Tableau to uncover reveal insights about infection rates, death rates, and vaccination trends over time and across regions. 
+This project explores the global spread and impact of COVID-19 from the beginning of 2020 up to March 2025 using data from Our World In Data. It combines SQL-based analysis with data visualization in Tableau to reveal insights about infection rates, death rates, and vaccination trends over time and across regions. 
 
 --- 
+## Dashboard: 
+![image](https://github.com/user-attachments/assets/3cef8d69-9dd2-4038-aadd-9749d7e2a965)
+
+---
 
 ## Tools Used 
 - Microsoft SQL Server Management Studio (SSMS)
