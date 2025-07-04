@@ -82,6 +82,7 @@ WHERE v.continent IS NOT NULL -- Exclude aggregate rows or non-country records
 ORDER BY v.people_fully_vaccinated_per_hundred DESC; 
 ```
 Result-set: 
+
 ![Query1](https://github.com/user-attachments/assets/5e80fcfc-4788-4013-b939-be4741e67a88)
 
 ---
@@ -120,6 +121,7 @@ FROM pre_post_reproduction
 ORDER BY reproduction_percent_change ASC; 
 ```
 Result-set: 
+
 ![Query2](https://github.com/user-attachments/assets/d9c90189-d3c7-45e0-9043-fb067416eb52)
 
 ---
@@ -173,6 +175,7 @@ JOIN continent_vax_coverage_50pct v ON p.continent = v.continent
 ORDER BY days_difference ASC;
 ```
 Result-set: 
+
 ![Query3](https://github.com/user-attachments/assets/2b2cb9a5-ba9d-41eb-b123-6b8b75df8b6b)
 
 ---
@@ -221,6 +224,7 @@ JOIN country_peaks s ON b.country = s.country
 ORDER BY cases_percent_change; 
 ```
 Result-set: 
+
 ![Query4](https://github.com/user-attachments/assets/c8a68d52-f0e7-4873-b1f5-8619ca7d2be1)
 
 ---
