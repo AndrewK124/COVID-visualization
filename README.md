@@ -1,6 +1,6 @@
 # COVID-19 Data Exploration and Visualization Project 
 
-This project aims to answer four realistic and high-value questions regarding COVID-19 data gathered from the beginning of 2020 up to March 2025 from OurWorldInData. 
+This project analyzes global COVID data from January 2020 to March 2025 to discover insights on vaccination rollouts, mortality rates, and policy effectiveness across countries and continents using Excel, SQL, and Tableau
 
 The questions at hand are as follows: 
 1. What's the relationship between vaccination rates and COVID-19 mortality rates across countries? 
