@@ -229,7 +229,9 @@ Result-set:
 
 ---
 ## Dashboard Link
+
 Tableau Public: https://public.tableau.com/app/profile/andrew.key3510/viz/CovidViz_17514850600140/Dashboard1
 ---
-## Side Note: 
+## Side Note:
+
 This project was originally a guided project created by [Alex The Analyst](https://www.youtube.com/watch?v=qfyynHBFOsM&list=PLUaB-1hjhk8H48Pj32z4GZgGWyylqv85f&index=2) (thank you, Alex!). I completely overhauled it, incorporating more realistic and exploratory analyses, and creating original visualization to reflect real-world Data Analyst projects. 
