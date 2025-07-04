@@ -6,21 +6,31 @@ The questions at hand are as follows:
 1. What's the relationship between vaccination rates and COVID-19 mortality rates across countries? 
 2. How did the COVID-19 reproduction rate change before and after mass rollouts in different countries? 
 3. Which continents achieved the fastest vaccination rollout relative to their peak daily new cases? 
-4. Which countries had the most effective response measures? 
+4. Which countries had the most effective response measures?
 --- 
+## Key Findings: 
+- Countries with higher vaccination rates generally experienced lower deaths per million after achieving >=50% vaccination coverage.
+- Average COVID reproduction rates decreased overall after mass rollouts in most countries.
+- Asia achieved 50% vaccination coverage well before its peak cases, suggesting a proactice vaccine rollout.
+- Countries with stricter stringency measures saw varied effectiveness in reducing new cases post-policy implementation
+---
 ## Dashboard: 
 ![image](https://github.com/user-attachments/assets/8aac9ea3-6513-4fb9-a330-3948a88c1a02)
 ---
-## How the Data Was Gathered:
+## Data Source and Preparation:
 I gathered the data by going to [OurWorldInData's datasets](https://docs.owid.io/projects/etl/api/covid/#download-data) and downloading their "Cases and Deaths" and "Vaccinations" datasets. After downloading the .csv files, I transformed them into Excel files, cleaned them a little bit by removing extraneous columns, then imported them into SSMS. 
+
+Date Range: January 2020 – March 2025
+
+Scope: 200+ countries and territories
 ---
-## Tools Used 
-- Microsoft Excel
-- Microsoft SQL Server Management Studio (SSMS)
-- Tableau Public
+## Tools Used:
+- Microsoft Excel: Data cleaning, .csv to .xlsx transformation, and SQL to Tableau importing
+- Microsoft SQL Server Management Studio (SSMS): Data exploration and analytical querying
+- Tableau Public: Visualizing SQL queries
 ---
-## SQL Queries and Result-sets 
-Query #1: This was crafted to answer: "What's the relationship between vaccination rates and COVID-19 mortality rates across countries?"
+## SQL Queries and Result-sets: 
+Query #1 Purpose: This query answers the question: "What's the relationship between vaccination rates and COVID-19 mortality rates across countries?". It analyzes the relationship between each's country's vaccination coverage (>=50%) and their post-vaccination COVID mortality rates to assess real-world vaccine impact. 
 ```
 -- Calculating post-vaccination death metrics for countries with >=50% vaccination coverage 
 WITH vax_coverage_date AS (
@@ -37,7 +47,7 @@ post_vax_deaths AS (
 	SELECT d.country, 
 		   SUM(d.new_deaths) AS total_deaths_post_vax_coverage, -- Total deaths after reaching 50% vaccination coverage 
 		   COUNT(DISTINCT d.date) AS num_days_post_vax_coverage, -- Number of days after reaching 50% vaccination coverage 
-		   MAX(d.population) AS population -- Maximum recorded popluation for scaling per million
+		   MAX(d.population) AS population -- Maximum recorded population for scaling per million
 	FROM CovidDeaths d 
 	JOIN vax_coverage_date v ON d.country = v.country 
 	WHERE d.date >= v.date_50pct -- Only consider the deaths on or after 50% vaccination coverage has been achieved 
@@ -73,7 +83,7 @@ ORDER BY v.people_fully_vaccinated_per_hundred DESC;
 Result-set: 
 ![image](https://github.com/user-attachments/assets/9183b862-14a9-4849-a0c0-d917cb8728fc)
 ---
-Query #2: This was crafted to answer: "How did the COVID-19 reproduction rate change before and after mass rollouts in different countries?"
+Query #2 Purpose: This query answers the question: "How did the COVID-19 reproduction rate change before and after mass rollouts in different countries?". It evaluates the impact of mass vaccination rollouts on the COVID reproduction rate (transmission rate). This query calculates the average reproduction rate 30 days before and after each country reached 50% vaccination coverage, enabling comparison of transmission trends and pre and post vaccination rollout. 
 ```
 -- Finding the earliest date when each country reached at least 50% vaccination coverage 
 WITH rollout_dates AS ( 
@@ -110,7 +120,7 @@ ORDER BY reproduction_percent_change ASC;
 Result-set: 
 ![image](https://github.com/user-attachments/assets/4b8fccfa-20cc-413f-83df-fbb623febf6c)
 ---
-Query #3: This was crafted to answer: "Which continents achieved the fastest vaccination rollout relative to their peak daily new cases?" 
+Query #3 Purpose: This query answers the question: "Which continents achieved the fastest vaccination rollout relative to their peak daily new cases?". It evaluates how proactive each continent was in vaccinating their populations relative to their peak daily COVID cases. This query identifies whether continents reached 50% vaccination coverage before, after, or on the same day as their peak infection date, offering insights into rollout responsiveness. 
 ```
 -- Calculating the timing between 50% vaccination coverage and peak daily new COVID cases
 
@@ -162,7 +172,7 @@ ORDER BY days_difference ASC;
 Result-set: 
 ![image](https://github.com/user-attachments/assets/d4799716-fd9e-4163-be33-825d1e09c92a)
 ---
-Query #4: This query was crafted to answer: "Which countries had the most effective response measures?"
+Query #4 Purpose: This query answers the question: "Which countries had the most effective response measures?". It determines which countries' policy responses were most effective in reducing COVID cases. This query analyzes the percent change in average new cases per million before and after each country's peak stringency index date, highlighting the real-world impact of strcier measures on infection rates. 
 ```
 -- Calculating percent change in new cases per million before and after peak stringency index per country
 WITH peak_stringency AS ( 
@@ -213,4 +223,4 @@ Result-set:
 Tableau Public: https://public.tableau.com/app/profile/andrew.key3510/viz/CovidViz_17514850600140/Dashboard1
 ---
 ## Side Note: 
-This project was originally a guided project created by [Alex The Analyst](https://www.youtube.com/watch?v=qfyynHBFOsM&list=PLUaB-1hjhk8H48Pj32z4GZgGWyylqv85f&index=2) (thank you, Alex!) but I completely overhauled it to be more realistic. 
+This project was originally a guided project created by [Alex The Analyst](https://www.youtube.com/watch?v=qfyynHBFOsM&list=PLUaB-1hjhk8H48Pj32z4GZgGWyylqv85f&index=2) (thank you, Alex!). I completely overhauled it, incorporating more realistic and exploratory analyses, and creating original visualization to reflect real-world Data Analyst projects. 
