@@ -234,4 +234,4 @@ Tableau Public: https://public.tableau.com/app/profile/andrew.key3510/viz/CovidV
 ---
 ## Side Note:
 
-This project was originally a guided project created by [Alex The Analyst](https://www.youtube.com/watch?v=qfyynHBFOsM&list=PLUaB-1hjhk8H48Pj32z4GZgGWyylqv85f&index=2) (thank you, Alex!). I completely overhauled it, incorporating more realistic and exploratory analyses, and creating original visualization to reflect real-world Data Analyst projects. 
+This project was originally a guided project created by [Alex The Analyst](https://www.youtube.com/watch?v=qfyynHBFOsM&list=PLUaB-1hjhk8H48Pj32z4GZgGWyylqv85f&index=2) (thank you, Alex!). I completely overhauled it, incorporating more realistic and exploratory analyses, and creating an original visualization to reflect real-world Data Analyst projects. 
