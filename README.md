@@ -15,7 +15,8 @@ The questions at hand are as follows:
 - Countries with stricter stringency measures saw varied effectiveness in reducing new cases post-policy implementation
 ---
 ## Dashboard: 
-![image](https://github.com/user-attachments/assets/8aac9ea3-6513-4fb9-a330-3948a88c1a02)
+![Dashboard](https://github.com/user-attachments/assets/f0f4bfc9-8dc4-4f03-9a0a-75a72fb95b6d)
+
 ---
 ## Data Source and Preparation:
 I gathered the data by going to [OurWorldInData's datasets](https://docs.owid.io/projects/etl/api/covid/#download-data) and downloading their "Cases and Deaths" and "Vaccinations" datasets. After downloading the .csv files, I transformed them into Excel files, cleaned them a little bit by removing extraneous columns, then imported them into SSMS. 
@@ -81,7 +82,8 @@ WHERE v.continent IS NOT NULL -- Exclude aggregate rows or non-country records
 ORDER BY v.people_fully_vaccinated_per_hundred DESC; 
 ```
 Result-set: 
-![image](https://github.com/user-attachments/assets/9183b862-14a9-4849-a0c0-d917cb8728fc)
+![Query1](https://github.com/user-attachments/assets/5e80fcfc-4788-4013-b939-be4741e67a88)
+
 ---
 Query #2 Purpose: This query answers the question: "How did the COVID-19 reproduction rate change before and after mass rollouts in different countries?". It evaluates the impact of mass vaccination rollouts on the COVID reproduction rate (transmission rate). This query calculates the average reproduction rate 30 days before and after each country reached 50% vaccination coverage, enabling comparison of transmission trends and pre and post vaccination rollout. 
 ```
@@ -118,7 +120,8 @@ FROM pre_post_reproduction
 ORDER BY reproduction_percent_change ASC; 
 ```
 Result-set: 
-![image](https://github.com/user-attachments/assets/4b8fccfa-20cc-413f-83df-fbb623febf6c)
+![Query2](https://github.com/user-attachments/assets/d9c90189-d3c7-45e0-9043-fb067416eb52)
+
 ---
 Query #3 Purpose: This query answers the question: "Which continents achieved the fastest vaccination rollout relative to their peak daily new cases?". It evaluates how proactive each continent was in vaccinating their populations relative to their peak daily COVID cases. This query identifies whether continents reached 50% vaccination coverage before, after, or on the same day as their peak infection date, offering insights into rollout responsiveness. 
 ```
@@ -170,7 +173,8 @@ JOIN continent_vax_coverage_50pct v ON p.continent = v.continent
 ORDER BY days_difference ASC;
 ```
 Result-set: 
-![image](https://github.com/user-attachments/assets/d4799716-fd9e-4163-be33-825d1e09c92a)
+![Query3](https://github.com/user-attachments/assets/2b2cb9a5-ba9d-41eb-b123-6b8b75df8b6b)
+
 ---
 Query #4 Purpose: This query answers the question: "Which countries had the most effective response measures?". It determines which countries' policy responses were most effective in reducing COVID cases. This query analyzes the percent change in average new cases per million before and after each country's peak stringency index date, highlighting the real-world impact of strcier measures on infection rates. 
 ```
@@ -217,7 +221,8 @@ JOIN country_peaks s ON b.country = s.country
 ORDER BY cases_percent_change; 
 ```
 Result-set: 
-![image](https://github.com/user-attachments/assets/1770f384-20b4-4585-9883-0b65cf422550)
+![Query4](https://github.com/user-attachments/assets/c8a68d52-f0e7-4873-b1f5-8619ca7d2be1)
+
 ---
 ## Dashboard Link
 Tableau Public: https://public.tableau.com/app/profile/andrew.key3510/viz/CovidViz_17514850600140/Dashboard1
