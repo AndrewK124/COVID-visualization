@@ -7,12 +7,14 @@ The questions at hand are as follows:
 2. How did the COVID-19 reproduction rate change before and after mass rollouts in different countries? 
 3. Which continents achieved the fastest vaccination rollout relative to their peak daily new cases? 
 4. Which countries had the most effective response measures?
+   
 --- 
 ## Key Findings: 
 - Countries with higher vaccination rates generally experienced lower deaths per million after achieving >=50% vaccination coverage.
 - Average COVID reproduction rates decreased overall after mass rollouts in most countries.
 - Asia achieved 50% vaccination coverage well before its peak cases, suggesting a proactice vaccine rollout.
 - Countries with stricter stringency measures saw varied effectiveness in reducing new cases post-policy implementation
+  
 ---
 ## Dashboard: 
 ![Dashboard](https://github.com/user-attachments/assets/f0f4bfc9-8dc4-4f03-9a0a-75a72fb95b6d)
@@ -21,14 +23,12 @@ The questions at hand are as follows:
 ## Data Source and Preparation:
 I gathered the data by going to [OurWorldInData's datasets](https://docs.owid.io/projects/etl/api/covid/#download-data) and downloading their "Cases and Deaths" and "Vaccinations" datasets. After downloading the .csv files, I transformed them into Excel files, cleaned them a little bit by removing extraneous columns, then imported them into SSMS. 
 
-Date Range: January 2020 – March 2025
-
-Scope: 200+ countries and territories
 ---
 ## Tools Used:
 - Microsoft Excel: Data cleaning, .csv to .xlsx transformation, and SQL to Tableau importing
 - Microsoft SQL Server Management Studio (SSMS): Data exploration and analytical querying
 - Tableau Public: Visualizing SQL queries
+- 
 ---
 ## SQL Queries and Result-sets: 
 Query #1 Purpose: This query answers the question: "What's the relationship between vaccination rates and COVID-19 mortality rates across countries?". It analyzes the relationship between each's country's vaccination coverage (>=50%) and their post-vaccination COVID mortality rates to assess real-world vaccine impact. 
@@ -231,6 +231,7 @@ Result-set:
 ## Dashboard Link
 
 Tableau Public: https://public.tableau.com/app/profile/andrew.key3510/viz/CovidViz_17514850600140/Dashboard1
+
 ---
 ## Side Note:
 
