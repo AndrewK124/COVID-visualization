@@ -24,7 +24,8 @@ The questions at hand are as follows:
 - Reproduction Rate chart:
   1. The points below the reference line represent countries that experienced an overall decrease in COVID reproduction rates after achieving 50% vaccination coverage.
   2. The points on the line represent countries that didn't experience any changes in COVID repreduction after achieving 50% vaccination coverage.
-  3. The points above the line represent countries that experienced an overall increase in COVID reproduction rates despite achieving 50% vaccination coverage.  
+  3. The points above the line represent countries that experienced an overall increase in COVID reproduction rates despite achieving 50% vaccination coverage.
+
 - Stringency Measures chart:
   1. The points below the line represent countries that experienced a reduction in COVID cases, indicating that their stringency measures were effective in reducing cases.
   2. Points on the line represent countries in which their stringency measures had no measurable effect on COVID cases.
