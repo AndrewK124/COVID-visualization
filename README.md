@@ -1,6 +1,6 @@
 # COVID-19 Data Exploration and Visualization Project 
 
-This project analyzes global COVID data from January 2020 to March 2025 to discover insights on vaccination rollouts, mortality rates, and policy effectiveness across countries and continents using Excel, SQL, and Tableau
+This project analyzes global COVID data from January 2020 to March 2025 to discover insights on vaccination rollouts, mortality rates, and policy effectiveness across countries and continents using Excel, SQL, and Tableau.
 
 The questions at hand are as follows: 
 1. What's the relationship between vaccination rates and COVID-19 mortality rates across countries? 
@@ -21,8 +21,14 @@ The questions at hand are as follows:
 
 ---
 ## Visualization Clarification: 
-- Reproduction Rate chart: The points below the reference line represent countries that experienced a decrease in COVID reproduction rates while points above the reference line represent countries that experienced an increase in COVID reproduction rates. 
-- Stringency Measures chart: The points below the line represent countries that experienced a reduction in COVID cases, indicating that their stringency measures were effective in reducing cases. Points on the line represent countries in which their stringency measures had no measurable effect on COVID cases. The points above the line represent countries that experienced an increase in COVID cases despite their stringency measures, indicating that their measures were considerably inept. 
+- Reproduction Rate chart:
+  1. The points below the reference line represent countries that experienced an overall decrease in COVID reproduction rates after achieving 50% vaccination coverage.
+  2. The points on the line represent countries that didn't experience any changes in COVID repreduction after achieving 50% vaccination coverage.
+  3. The points above the line represent countries that experienced an overall increase in COVID reproduction rates despite achieving 50% vaccination coverage.  
+- Stringency Measures chart:
+  1. The points below the line represent countries that experienced a reduction in COVID cases, indicating that their stringency measures were effective in reducing cases.
+  2. Points on the line represent countries in which their stringency measures had no measurable effect on COVID cases.
+  3. The points above the line represent countries that experienced an increase in COVID cases despite their stringency measures, indicating that their measures were considerably inept. 
 
 ---
 ## Data Source and Preparation:
