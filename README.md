@@ -12,12 +12,17 @@ The questions at hand are as follows:
 ## Key Findings: 
 - Countries with higher vaccination rates generally experienced lower deaths per million after achieving >=50% vaccination coverage.
 - Average COVID reproduction rates decreased overall after mass rollouts in most countries.
-- Asia achieved 50% vaccination coverage well before its peak cases, suggesting a proactice vaccine rollout.
-- Countries with stricter stringency measures saw varied effectiveness in reducing new cases post-policy implementation
+- Asia achieved 50% vaccination coverage well before its peak cases, suggesting a proactive vaccine rollout.
+- Countries with stricter stringency measures saw varied effectiveness in reducing new cases post policy implementation.
   
 ---
 ## Dashboard: 
-![Dashboard](https://github.com/user-attachments/assets/f0f4bfc9-8dc4-4f03-9a0a-75a72fb95b6d)
+![Dashboard](https://github.com/user-attachments/assets/76addd0f-37ca-4924-ad91-59074df742b7)
+
+---
+## Visualization Clarification: 
+- Reproduction Rate chart: The points below the reference line represent countries that experienced a decrease in COVID reproduction rates while points above the reference line represent countries that experienced an increase in COVID reproduction rates. 
+- Stringency Measures chart: The points below the line represent countries that experienced a reduction in COVID cases, indicating that their stringency measures were effective in reducing cases. Points on the line represent countries in which their stringency measures had no measurable effect on COVID cases. The points above the line represent countries that experienced an increase in COVID cases despite their stringency measures, indicating that their measures were considerably inept. 
 
 ---
 ## Data Source and Preparation:
@@ -28,7 +33,7 @@ I gathered the data by going to [OurWorldInData's datasets](https://docs.owid.io
 - Microsoft Excel: Data cleaning, .csv to .xlsx transformation, and SQL to Tableau importing
 - Microsoft SQL Server Management Studio (SSMS): Data exploration and analytical querying
 - Tableau Public: Visualizing SQL queries
-- 
+  
 ---
 ## SQL Queries and Result-sets: 
 Query #1 Purpose: This query answers the question: "What's the relationship between vaccination rates and COVID-19 mortality rates across countries?". It analyzes the relationship between each's country's vaccination coverage (>=50%) and their post-vaccination COVID mortality rates to assess real-world vaccine impact. 
@@ -235,4 +240,4 @@ Tableau Public: https://public.tableau.com/app/profile/andrew.key3510/viz/CovidV
 ---
 ## Side Note:
 
-This project was originally a guided project created by [Alex The Analyst](https://www.youtube.com/watch?v=qfyynHBFOsM&list=PLUaB-1hjhk8H48Pj32z4GZgGWyylqv85f&index=2) (thank you, Alex!). I completely overhauled it, incorporating more realistic and exploratory analyses, and creating an original visualization to reflect real-world Data Analyst projects. 
+This project was originally a guided project created by [Alex The Analyst](https://www.youtube.com/watch?v=qfyynHBFOsM&list=PLUaB-1hjhk8H48Pj32z4GZgGWyylqv85f&index=2) (thank you, Alex!). However, I completely overhauled it, incorporating more realistic analyses, and creating an original visualization to reflect real world Data Analyst projects. 
